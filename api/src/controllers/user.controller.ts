@@ -10,3 +10,12 @@ export const createUser = async (req: Request, res: Response) => {
     res.status(500).json({ message: "Error creating user", error });
   }
 };
+
+export const getAllUsers = async (req: Request, res: Response) => {
+  try {
+    const users = await userService.getAllUsers();
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching users", error });
+  }
+};
