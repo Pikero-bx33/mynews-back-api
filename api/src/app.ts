@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/v1", v1Router);
+app.use("/api/v1", v1Router); // préfixe global pour toutes les routes de l'API
 
 /* app.use(notFound);
 app.use(errorHandler); */
